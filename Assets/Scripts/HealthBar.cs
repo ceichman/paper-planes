@@ -33,6 +33,7 @@ public class HealthBar : MonoBehaviour
 
     public void FixedUpdate()
     {
+        if (!_rectTransform || !followTransform) return;
         _rectTransform.position = followTransform.position + new Vector3(0, yOffset);
     }
 

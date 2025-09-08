@@ -10,30 +10,12 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
     public float health;
     public int _playerNum;
     [SerializeField] private HealthBar _healthBar; 
-    void Start()
-    {
-
-    }
 
     void Awake()
     {
         canDamage = true;
     }
-
-    void Update()
-    {
-        TestDamage();
-        
-    }
-
-    void TestDamage()
-    { // for debug purposes only; TODO: REMOVE when not needed.
-        if (Input.GetKeyDown(KeyCode.T)) {
-            Damage(10);
-        }
-    }
-
-    public void Damage(int damagePoints)
+    public void Damage(float damagePoints)
     {
         if (canDamage)
         {
@@ -44,6 +26,7 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
             {
                 Debug.Log("Calling game over");
                 GameManager.Singleton.DisplayGameOver(_playerNum);
+                Destroy(this.gameObject);
             }
         }
     }
