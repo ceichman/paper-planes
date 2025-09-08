@@ -1,14 +1,17 @@
 using UnityEngine;
-
 public class PlayerFireToyScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+// this is just used to test PlayerDestroy; do not actually use this in game (damages self)
     [SerializeField] private int playerNum;
-    [SerializeField] private KeyCode _fire;
+    private KeyCode _fire;
+    private PlayerHealth _playerDestroy;
+    [SerializeField] private int _damage;
     // Update is called once per frame
+
     void Start()
     {
         ConfigureControls();
+        _playerDestroy = GetComponent<PlayerHealth>();
     }
 
     void ConfigureControls()
@@ -17,10 +20,16 @@ public class PlayerFireToyScript : MonoBehaviour
         {
             _fire = KeyCode.Space;
         }
+        else {
+            _fire = KeyCode.DownArrow;
+        }
     }
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(_fire))
+        {
+            _playerDestroy.Damage(10); 
+        }
     }
 }
