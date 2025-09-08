@@ -7,6 +7,7 @@ public class PlayerWeapons : MonoBehaviour
     public int playerNum;
     [SerializeField] private KeyCode _fire;
     public GameObject currentWeapon;
+    private float cooldownTimer = 0;
     // Update is called once per frame
 
     void Start()
@@ -15,10 +16,19 @@ public class PlayerWeapons : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(_fire))
+        if (Input.GetKey(_fire) && (cooldownTimer == 0))
         {
             GameObject weaponObject = Instantiate(this.currentWeapon, this.transform.position, this.transform.rotation);
             weaponObject.GetComponent<Weapon>().BeginConfigure(this.gameObject, this.playerNum);
+            cooldownTimer = currentWeapon.GetComponent<Weapon>().cooldown;
+        }
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
+        else
+        {
+            cooldownTimer = 0;
         }
     }
 }

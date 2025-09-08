@@ -18,6 +18,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!player1 || !player2) return;
         Vector2 midpointBetweenPlayers = (((player1.transform.position - player2.transform.position) / 2) + player2.transform.position);
         this.transform.position = new Vector3(midpointBetweenPlayers.x, midpointBetweenPlayers.y, -10);
         float distanceBetweenPlayers = Vector2.Distance(player1.transform.position, player2.transform.position);

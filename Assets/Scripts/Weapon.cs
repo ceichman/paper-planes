@@ -8,6 +8,7 @@ public abstract class Weapon : MonoBehaviour
     abstract public void Configure(GameObject shooter);
 
     [SerializeField] protected float damage;
+    [SerializeField] public float cooldown;
 
     public void BeginConfigure(GameObject shooter, int playerNumber)
     {

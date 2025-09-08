@@ -7,7 +7,7 @@ public class HealthBar : MonoBehaviour
     public float maxWidth;
     public float Height;
     public Transform followTransform;
-    public int yOffset; 
+    public int yOffset;
     public RectTransform healthTransform;
     private RectTransform _rectTransform;
 
@@ -36,5 +36,10 @@ public class HealthBar : MonoBehaviour
         _rectTransform.position = followTransform.position + new Vector3(0, yOffset);
     }
 
-    
+    public void Remove()
+    {
+        Destroy(this.gameObject);
+    }
+
+
 }

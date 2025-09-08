@@ -13,10 +13,12 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
     {
 
     }
+
     void Awake()
     {
         canDamage = true;
     }
+
     public void Damage(float damagePoints)
     {
         if (canDamage)
@@ -27,6 +29,7 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
             if (health <= 0)
             {
                 OnDestroy.Invoke(); // Drag public methods into the inspector field of OnDestroy, and these will be automatically called
+                Destroy(this.gameObject);
             }
         }
     }

@@ -764,6 +764,26 @@ PrefabInstance:
       propertyPath: _healthBar
       value: 
       objectReference: {fileID: 193246527}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 193246527}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Remove
+      objectReference: {fileID: 0}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HealthBar, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1975700554200948799, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.762279
@@ -855,6 +875,26 @@ PrefabInstance:
       propertyPath: _healthBar
       value: 
       objectReference: {fileID: 282339814}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 282339814}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Remove
+      objectReference: {fileID: 0}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: HealthBar, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 656481918308770024, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: OnDestroy.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1975700554200948799, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.4

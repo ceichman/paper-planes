@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
+  cooldown: 0.4
   acceleration: 1.2
 --- !u!70 &3862557354915528599
 CapsuleCollider2D:
