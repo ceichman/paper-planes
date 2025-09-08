@@ -9,10 +9,12 @@ public class PlaneMovement : MonoBehaviour
     private Rigidbody2D _rb2d;
     [SerializeField] private int _playerNum; // either 1 or 2 
     [SerializeField] private float _thrustPower;
+    [SerializeField] private float _rotationTorque;
+    [SerializeField] private float _backgroundTorqueStrength;
+    [SerializeField] private float _wingAngle = 10;
     [SerializeField] private KeyCode _thrust;
     [SerializeField] private KeyCode _rotateLeft;
     [SerializeField] private KeyCode _rotateRight;
-    [SerializeField] private float _rotationSpeed; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,11 +37,15 @@ public class PlaneMovement : MonoBehaviour
         }
         if (Input.GetKey(_rotateLeft))
         {
-            _rb2d.MoveRotation(_rb2d.rotation + _rotationSpeed);
+            _rb2d.AddTorque(_rotationTorque);
         }
         if (Input.GetKey(_rotateRight))
-        { 
-            _rb2d.MoveRotation(_rb2d.rotation - _rotationSpeed);
+        {
+            _rb2d.AddTorque(-_rotationTorque);
         }
+        // add resetting rotation ("background torque") towards horizontal direction
+        float currentRotation = this.transform.rotation.eulerAngles.z;
+        float angularDistanceToHorizontal = (currentRotation > 180) ? 270 - currentRotation + _wingAngle: 90 - currentRotation - _wingAngle;
+        _rb2d.AddTorque(_backgroundTorqueStrength * angularDistanceToHorizontal);
     }
 }
