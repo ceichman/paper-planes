@@ -1007,7 +1007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6624349546314394338, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
       propertyPath: _rotateRight
-      value: 93
+      value: 91
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
