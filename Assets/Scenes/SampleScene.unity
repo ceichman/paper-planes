@@ -1119,6 +1119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 1
+  _fire: 0
 --- !u!114 &1509090243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,6 +1197,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerNum: 1
   _thrustPower: 7
+  _thrust: 114
+  _rotateLeft: 113
+  _rotateRight: 119
   _rotationSpeed: 5
 --- !u!50 &1509090246
 Rigidbody2D:
@@ -1330,6 +1334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNum: 2
+  _fire: 0
 --- !u!114 &1807448360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,6 +1412,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerNum: 2
   _thrustPower: 7
+  _thrust: 92
+  _rotateLeft: 112
+  _rotateRight: 91
   _rotationSpeed: 5
 --- !u!50 &1807448363
 Rigidbody2D:
