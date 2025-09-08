@@ -1,9 +1,10 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerWeapons : MonoBehaviour
 {
 // this is just used to test PlayerDestroy; do not actually use this in game (damages self)
-    [SerializeField] private int playerNum;
+    public int playerNum;
     [SerializeField] private KeyCode _fire;
     public GameObject currentWeapon;
     // Update is called once per frame
@@ -16,7 +17,8 @@ public class PlayerWeapons : MonoBehaviour
     {
         if (Input.GetKeyDown(_fire))
         {
-            Instantiate(this.currentWeapon, this.transform.position, this.transform.rotation);
+            GameObject weaponObject = Instantiate(this.currentWeapon, this.transform.position, this.transform.rotation);
+            weaponObject.GetComponent<Weapon>().BeginConfigure(this.gameObject, this.playerNum);
         }
     }
 }

@@ -6,9 +6,8 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
 {
     public UnityEvent OnDestroy;
     public bool canDamage; // Powerup, such as a shield, may want to toggle this on/off
-    public int maxHealth;
-    public int health;
-    private int _playerNum;
+    public float maxHealth;
+    public float health;
     [SerializeField] private HealthBar _healthBar; 
     void Start()
     {
@@ -18,7 +17,7 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
     {
         canDamage = true;
     }
-    public void Damage(int damagePoints)
+    public void Damage(float damagePoints)
     {
         if (canDamage)
         {

@@ -7,7 +7,6 @@ public class PlaneMovement : MonoBehaviour
 {
 
     private Rigidbody2D _rb2d;
-    [SerializeField] private int _playerNum; // either 1 or 2 
     [SerializeField] private float _thrustPower;
     [SerializeField] private float _rotationTorque;
     [SerializeField] private float _backgroundTorqueStrength;
@@ -45,7 +44,10 @@ public class PlaneMovement : MonoBehaviour
         }
         // add resetting rotation ("background torque") towards horizontal direction
         float currentRotation = this.transform.rotation.eulerAngles.z;
-        float angularDistanceToHorizontal = (currentRotation > 180) ? 270 - currentRotation + _wingAngle: 90 - currentRotation - _wingAngle;
+        float angularDistanceToHorizontal = (currentRotation > 180) ? 270 - currentRotation + _wingAngle : 90 - currentRotation - _wingAngle;
         _rb2d.AddTorque(_backgroundTorqueStrength * angularDistanceToHorizontal);
+
+        // more drag at high angles of attack (from 0 to 1)
+        _rb2d.linearDamping = Mathf.Clamp(0.3f, 1.0f, Mathf.Abs(angularDistanceToHorizontal) / 90.0f);
     }
 }
