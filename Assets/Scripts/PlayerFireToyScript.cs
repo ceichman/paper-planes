@@ -10,7 +10,6 @@ public class PlayerFireToyScript : MonoBehaviour
 
     void Start()
     {
-<<<<<<< HEAD
         ConfigureControls();
         _playerDestroy = GetComponent<PlayerHealth>();
     }
@@ -24,9 +23,6 @@ public class PlayerFireToyScript : MonoBehaviour
         else {
             _fire = KeyCode.DownArrow;
         }
-=======
-        // ConfigureControls();
->>>>>>> origin/main
     }
 
     void Update()
