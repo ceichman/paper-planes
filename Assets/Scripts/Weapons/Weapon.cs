@@ -3,9 +3,14 @@ using UnityEngine;
 
 public abstract class Weapon : MonoBehaviour
 {
-    private int _playerNumber;
+    protected int _playerNumber;
 
-    abstract public void Configure(GameObject shooter);
+    abstract protected void Configure(GameObject shooter);
+
+    protected void SetPlayerNumber(int playerNumber)
+    {
+        this._playerNumber = playerNumber;
+    }
 
     [SerializeField] protected float damage;
     [SerializeField] public float cooldown;

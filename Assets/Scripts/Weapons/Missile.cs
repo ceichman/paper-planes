@@ -9,7 +9,7 @@ public class Missile : Weapon
     public static float maximumSpeed = 100f;
     public static float inheritedVelocityScaling = 10f;
 
-    public override void Configure(GameObject shooter)
+    protected override void Configure(GameObject shooter)
     {
         Vector2 shooterVelocity = shooter.GetComponent<Rigidbody2D>().linearVelocity.normalized;
         this.speed = Missile.inheritedVelocityScaling * Vector2.Dot(shooterVelocity, shooter.transform.up);

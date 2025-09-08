@@ -8,7 +8,7 @@ public class Bomb : Weapon
     public static float maximumSpeed = 100f;
 
 
-    public override void Configure(GameObject shooter)
+    protected override void Configure(GameObject shooter)
     {
 
     }
