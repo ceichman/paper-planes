@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("name: " + transform.name);
         Debug.Log("Game Manager method called with losingPlayer " + losingPlayer);
-        if (losingPlayer == 0)
+        if (losingPlayer == 2)
         {
             Debug.Log("here");
             _gameOverText.text = "Player 1 Wins!";
