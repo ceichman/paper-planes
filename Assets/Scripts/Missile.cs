@@ -15,15 +15,14 @@ public class Missile : Weapon
         this.speed = Missile.inheritedVelocityScaling * Vector2.Dot(shooterVelocity, shooter.transform.up);
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        transform.position += transform.up * Time.fixedDeltaTime * speed;
-        Debug.DrawLine(this.transform.position, (this.transform.position - this.transform.up) * speed * 5.0f, Color.red);
+        transform.position += transform.up * Time.deltaTime * speed;
         speed += acceleration;
             
-        if (this.speed > maximumSpeed)
+        if (this.speed > Missile.maximumSpeed)
         {
-            this.speed = maximumSpeed;
+            this.speed = Missile.maximumSpeed;
             this.acceleration = 0;
         }
     }

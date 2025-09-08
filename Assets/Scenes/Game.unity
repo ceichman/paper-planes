@@ -836,6 +836,10 @@ PrefabInstance:
       propertyPath: playerNum
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2877682840139773858, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
+      propertyPath: currentWeapon
+      value: 
+      objectReference: {fileID: 7059739907036733166, guid: 610e34b2b26ce44078063fa7b292689a, type: 3}
     - target: {fileID: 6624349546314394338, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
       propertyPath: _thrust
       value: 92
