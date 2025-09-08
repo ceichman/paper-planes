@@ -8,7 +8,7 @@ public class PlaneMovement : MonoBehaviour
 
     private Rigidbody2D _rb2d;
     [SerializeField] private int _playerNum; // either 1 or 2 
-    [SerializeField] private float _thrustPower;
+    [SerializeField] public float _thrustPower;
     [SerializeField] private float _rotationTorque;
     [SerializeField] private float _backgroundTorqueStrength;
     [SerializeField] private float _wingAngle = 10;
