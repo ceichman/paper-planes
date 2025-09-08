@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class PlayerWeapons : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+// this is just used to test PlayerDestroy; do not actually use this in game (damages self)
     [SerializeField] private int playerNum;
     [SerializeField] private KeyCode _fire;
     public GameObject currentWeapon;
     // Update is called once per frame
+
     void Start()
     {
     }
