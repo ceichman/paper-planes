@@ -102,6 +102,8 @@ GameObject:
   - component: {fileID: 1640712213118061784}
   - component: {fileID: 656481918308770024}
   - component: {fileID: 2877682840139773858}
+  - component: {fileID: 8478246431424735132}
+  - component: {fileID: 7602832731004590813}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -307,3 +309,52 @@ MonoBehaviour:
   playerNum: 1
   _fire: 101
   currentWeapon: {fileID: 3222226044441569052, guid: b1b665b5cfd344418bb05bda6b020f5a, type: 3}
+--- !u!114 &6726154645666315361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621869916400479354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87291ef1a6ecf4367bb4c683ccac38c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8478246431424735132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621869916400479354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fda437b3bc9648218ee1d9f7b4b0515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grav: 1
+  cooldown: 2
+  unfoldKey: 0
+--- !u!95 &7602832731004590813
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621869916400479354}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

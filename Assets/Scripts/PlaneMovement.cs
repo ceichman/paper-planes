@@ -31,7 +31,6 @@ public class PlaneMovement : MonoBehaviour
         // touch any key input, then we can set drag to something like 2.5f. 
         if (Input.GetKey(_thrust))
         {
-            Debug.Log("Thrust");
             _rb2d.AddForce(transform.up * _thrustPower);
         }
         if (Input.GetKey(_rotateLeft))
