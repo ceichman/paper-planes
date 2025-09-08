@@ -221,7 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _thrustPower: 5
-  _rotationTorque: 1
+  _rotationTorque: 2
   _backgroundTorqueStrength: 0.002
   _wingAngle: 10
   _thrust: 114

@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class Weapon : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public abstract class Weapon : MonoBehaviour
         if (player)
         {
             if (player.playerNum == this._playerNumber) return;
+            Camera.main.GetComponent<CameraController>().ShakeCamera(this.damage / 25f);
             // hit other player
             player.gameObject.GetComponent<PlayerHealth>().Damage(this.damage);
         }

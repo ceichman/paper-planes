@@ -137,6 +137,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb5d15bef752343c789bacbbdd44c849, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraShake:
+    m_PersistentCalls:
+      m_Calls: []
   damage: 25
   cooldown: 0.5
   acceleration: 1

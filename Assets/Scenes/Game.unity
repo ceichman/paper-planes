@@ -540,6 +540,10 @@ MonoBehaviour:
   player2: {fileID: 601562705}
   cameraScaleFactor: 1
   maxCameraSize: 10
+  shakeFrequency: 25
+  shakeStrength: 0.3
+  shakeRecoverySpeed: 1.5
+  transitionSpeed: 0.02
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
