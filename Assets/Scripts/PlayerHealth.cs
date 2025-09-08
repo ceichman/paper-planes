@@ -26,6 +26,7 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
             {
                 Debug.Log("Calling game over");
                 GameManager.Singleton.DisplayGameOver(_playerNum);
+                this.OnDestroy.Invoke();
                 Destroy(this.gameObject);
             }
         }
