@@ -8,16 +8,16 @@ public class PlaneMovement : MonoBehaviour
 
     private Rigidbody2D _rb2d;
     [SerializeField] private int _playerNum; // either 1 or 2 
-    private KeyCode _thrust;
     [SerializeField] private float _thrustPower;
-    private KeyCode _rotateLeft;
-    private KeyCode _rotateRight;
+    [SerializeField] private KeyCode _thrust;
+    [SerializeField] private KeyCode _rotateLeft;
+    [SerializeField] private KeyCode _rotateRight;
     [SerializeField] private float _rotationSpeed; 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         _rb2d = GetComponent<Rigidbody2D>();
-        ConfigureControls();
+        // ConfigureControls();
     }
 
     void ConfigureControls()
