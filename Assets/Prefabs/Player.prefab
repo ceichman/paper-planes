@@ -192,9 +192,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.2
   m_LinearDamping: 0.5
-  m_AngularDamping: 0
+  m_AngularDamping: 4
   m_GravityScale: 0.15
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -220,11 +220,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerNum: 1
-  _thrustPower: 10
+  _thrustPower: 5
+  _rotationTorque: 1
+  _backgroundTorqueStrength: 0.002
   _thrust: 114
   _rotateLeft: 113
   _rotateRight: 119
-  _rotationSpeed: 5
 --- !u!61 &1640712213118061784
 BoxCollider2D:
   m_ObjectHideFlags: 0
