@@ -8,15 +8,7 @@ public class PlayerFireToyScript : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        ConfigureControls();
-    }
-
-    void ConfigureControls()
-    {
-        if (playerNum == 1)
-        {
-            _fire = KeyCode.Space;
-        }
+        // ConfigureControls();
     }
 
     void Update()

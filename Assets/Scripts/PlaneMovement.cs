@@ -17,25 +17,6 @@ public class PlaneMovement : MonoBehaviour
     void Start()
     {
         _rb2d = GetComponent<Rigidbody2D>();
-        // ConfigureControls();
-    }
-
-    void ConfigureControls()
-    {
-        if (_playerNum == 1)
-        {
-            // feel free to change
-            _rotateLeft = KeyCode.A;
-            _rotateRight = KeyCode.D;
-            _thrust = KeyCode.W;
-        }
-        else
-        {
-            _thrust = KeyCode.UpArrow   ;
-            _rotateLeft = KeyCode.LeftArrow;
-            _rotateRight = KeyCode.RightArrow;
-            // for other player, set playerNum = 2 in inspector and then set your controls
-        }
     }
 
     void FixedUpdate()
