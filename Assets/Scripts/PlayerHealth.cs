@@ -8,6 +8,7 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
     public bool canDamage; // Powerup, such as a shield, may want to toggle this on/off
     public float maxHealth;
     public float health;
+    public int _playerNum;
     [SerializeField] private HealthBar _healthBar; 
     void Start()
     {
@@ -19,7 +20,20 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
         canDamage = true;
     }
 
-    public void Damage(float damagePoints)
+    void Update()
+    {
+        TestDamage();
+        
+    }
+
+    void TestDamage()
+    { // for debug purposes only; TODO: REMOVE when not needed.
+        if (Input.GetKeyDown(KeyCode.T)) {
+            Damage(10);
+        }
+    }
+
+    public void Damage(int damagePoints)
     {
         if (canDamage)
         {
@@ -28,16 +42,15 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
             Debug.Log("Damaged, new health: " + health);
             if (health <= 0)
             {
-                OnDestroy.Invoke(); // Drag public methods into the inspector field of OnDestroy, and these will be automatically called
-                Destroy(this.gameObject);
+                Debug.Log("Calling game over");
+                GameManager.Singleton.DisplayGameOver(_playerNum);
             }
         }
     }
 
     public void UpdateHealthUI()
     {
+        if (health < 0) health = 0; 
         _healthBar.SetHealth(health);
-        // call HealthBar.SetHealth(float health)
-
     }
 }
