@@ -101,12 +101,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5bc27126220d44d9bf785c74d6bb1bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootingSound: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   damage: 8
   cooldown: 0.1
   speed: 40
   lifetime: 0.2
   spread: 4
-  cannonBullet: {fileID: 8287673042113058876, guid: 3d00c168a16d843e2bbfb5b4526252ee, type: 3}
 --- !u!61 &5616887311332008783
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -7,13 +7,14 @@ public class PlayerWeapons : MonoBehaviour
     public int playerNum;
     [SerializeField] private KeyCode _fire;
     public GameObject currentWeapon;
+    private AudioSource audio;
 
-    public AudioSource shootingAudio;
     private float cooldownTimer = 0;
     // Update is called once per frame
 
     void Start()
     {
+        this.audio = this.GetComponent<AudioSource>();
     }
 
     void Update()
@@ -21,9 +22,10 @@ public class PlayerWeapons : MonoBehaviour
         if (Input.GetKey(_fire) && (cooldownTimer == 0))
         {
             GameObject weaponObject = Instantiate(this.currentWeapon, this.transform.position, this.transform.rotation);
-            weaponObject.GetComponent<Weapon>().BeginConfigure(this.gameObject, this.playerNum);
+            Weapon currentWeapon = weaponObject.GetComponent<Weapon>();
+            currentWeapon.BeginConfigure(this.gameObject, this.playerNum);
             cooldownTimer = currentWeapon.GetComponent<Weapon>().cooldown;
-            shootingAudio.Play();
+            audio.PlayOneShot(currentWeapon.shootingSound);
         }
         if (cooldownTimer > 0)
         {
