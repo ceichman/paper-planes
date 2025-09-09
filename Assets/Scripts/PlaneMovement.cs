@@ -55,7 +55,7 @@ public class PlaneMovement : MonoBehaviour
         _rb2d.linearDamping = Mathf.Clamp(0.3f, 1.0f, Mathf.Abs(angularDistanceToHorizontal) / 90.0f);
     }
 
-    void OCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Wall")
         {

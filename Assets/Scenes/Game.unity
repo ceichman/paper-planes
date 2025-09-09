@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 416473307820276857, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 50.9
+      value: 63.3
       objectReference: {fileID: 0}
     - target: {fileID: 416473307820276857, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
       propertyPath: m_LocalScale.y
@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 416473307820276857, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: 416473307820276857, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -189,7 +189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7561465484283185938, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6019,6 +6019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7561465484283185938, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6760,6 +6764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7561465484283185938, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6844,8 +6852,8 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 645376469
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1363166943
 RectTransform:
@@ -11843,7 +11851,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 416473307820276857, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 47.590874
+      value: 56.1
       objectReference: {fileID: 0}
     - target: {fileID: 416473307820276857, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
       propertyPath: m_LocalScale.y
@@ -12095,6 +12103,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7561465484283185938, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
       propertyPath: m_Name
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7561465484283185938, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
+      propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
     m_RemovedComponents: []

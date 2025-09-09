@@ -229,7 +229,7 @@ MonoBehaviour:
   _thrust: 114
   _rotateLeft: 113
   _rotateRight: 119
-  wallKnockbackStrength: 100
+  wallKnockbackStrength: 50
 --- !u!61 &1640712213118061784
 BoxCollider2D:
   m_ObjectHideFlags: 0
