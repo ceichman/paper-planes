@@ -9,11 +9,12 @@ public class PowerUpSpeed : PowerUp
     public float timer;
     public float increase;
 
-    public AudioSource speedUpAudio;
+    private AudioSource speedUpAudio;
 
 
     protected override IEnumerator OnConsumed()
     {
+        this.speedUpAudio = this.GetComponent<AudioSource>();
         float baseSpeed = player.GetComponent<PlaneMovement>()._thrustPower;
         Animator animator = player.GetComponent<Animator>();
         player.GetComponent<PlaneMovement>()._thrustPower = baseSpeed + increase;
