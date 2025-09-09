@@ -1,38 +1,18 @@
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
-public class PowerUpHealth : MonoBehaviour
+public class PowerUpHealth : PowerUp
 {
 
-    private GameObject player;
-    private float baseHealth;
     public float timer;
     public float increase;
 
     public AudioSource healAudio;
 
-
-    void OnTriggerEnter2D(Collider2D collision)
+    protected override IEnumerator OnConsumed()
     {
-        if (collision.gameObject.tag == "Player")
-        { 
-        player = collision.gameObject;
-        baseHealth = player.GetComponent<PlayerHealth>().health;
-
-        if (baseHealth < player.GetComponent<PlayerHealth>().maxHealth)
-        {
-            StartCoroutine(Heal());
-        }
-    }
-     }
-
-
-
-
-    IEnumerator Heal()
-    {
-
-
+        float baseHealth = player.GetComponent<PlayerHealth>().health;
+        if (baseHealth == player.GetComponent<PlayerHealth>().maxHealth) yield return null;
         player.GetComponent<Animator>().SetBool("Healed", true);
         healAudio.Play();
         player.GetComponent<PlayerHealth>().health = baseHealth + increase;
