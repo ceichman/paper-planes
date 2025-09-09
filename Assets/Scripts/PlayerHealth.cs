@@ -12,7 +12,9 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
     public float maxHealth;
     public float health;
 
-    public AudioSource damageAudio;
+    private AudioSource audioSource;
+
+    [SerializeField] public AudioClip damageSound;
     public int _playerNum;
 
     private Animator animator;
@@ -22,6 +24,12 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
     {
         canDamage = true;
     }
+
+    void Start()
+    {
+        this.audioSource = this.GetComponent<AudioSource>();
+    }
+
     public void Damage(float damagePoints)
     {
         if (canDamage)
@@ -43,7 +51,7 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
     {
         animator = GetComponent<Animator>();
         animator.SetBool("Damaged", true);
-        damageAudio.Play();
+        this.audioSource.PlayOneShot(this.damageSound);
         yield return new WaitForSeconds(2f);
         animator.SetBool("Damaged", false);
 

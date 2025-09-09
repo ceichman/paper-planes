@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Events;
 
 public abstract class Weapon : MonoBehaviour
@@ -12,6 +13,8 @@ public abstract class Weapon : MonoBehaviour
     {
         this._playerNumber = playerNumber;
     }
+
+    public AudioClip shootingSound;
 
     [SerializeField] protected float damage;
     [SerializeField] public float cooldown;
