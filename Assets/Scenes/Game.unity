@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7561465484283185938, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
+      propertyPath: m_TagString
+      value: PowerupKiller
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1544,6 +1548,55 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 416473307820276857, guid: 1c51cb55d2f81417e9bfeb9e3e676a1d, type: 3}
   m_PrefabInstance: {fileID: 1280378165}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1700903852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700903853}
+  - component: {fileID: 1700903854}
+  m_Layer: 0
+  m_Name: PowerupSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1700903853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700903852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700903854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700903852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab42a3fe119f47888631725fb40202e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUps:
+  - {fileID: 2827482450982394907, guid: 226fda40099a040c2849b343c2102fc9, type: 3}
+  - {fileID: 799271861862393141, guid: 0688d3341da58470381b9565341a4b66, type: 3}
+  maxSpawnDelay: 3
+  horizontalSpawnRadius: 15
 --- !u!1 &1842069944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,3 +1743,4 @@ SceneRoots:
   - {fileID: 601562704}
   - {fileID: 789964301}
   - {fileID: 991482333}
+  - {fileID: 1700903853}

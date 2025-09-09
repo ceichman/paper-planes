@@ -104,8 +104,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 0.4
-  timer: 5
-  increase: 5
+  timer: 3
+  increase: 4
   speedUpAudio: {fileID: 6538829885634227320}
 --- !u!61 &7268124552618618626
 BoxCollider2D:

@@ -5,25 +5,25 @@ public class PowerUpHealth : PowerUp
 {
 
     public float timer;
-    public float increase;
+    public float healingEffect;
 
     public AudioSource healAudio;
 
     protected override IEnumerator OnConsumed()
     {
-        float baseHealth = player.GetComponent<PlayerHealth>().health;
-        if (baseHealth == player.GetComponent<PlayerHealth>().maxHealth) yield return null;
+        PlayerHealth healthScript = player.GetComponent<PlayerHealth>();
+        float newHealth = Mathf.Min(healthScript.health + this.healingEffect, healthScript.maxHealth);
         player.GetComponent<Animator>().SetBool("Healed", true);
         healAudio.Play();
-        player.GetComponent<PlayerHealth>().health = baseHealth + increase;
+        healthScript.health = newHealth;
         Debug.Log("heal");
-        player.GetComponent<PlayerHealth>().UpdateHealthUI();
+        healthScript.UpdateHealthUI();
         Destroy(this.gameObject.GetComponent<SpriteRenderer>());
         
         yield return new WaitForSeconds(timer);
         Debug.Log("powerup over");
         player.GetComponent<Animator>().SetBool("Healed", false);
-         Destroy(this.gameObject);
+        Destroy(this.gameObject);
     
     }
 }
