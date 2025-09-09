@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PUMissile
       objectReference: {fileID: 0}
+    - target: {fileID: 5866793241271239532, guid: 226fda40099a040c2849b343c2102fc9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7285887074748810209, guid: 8f72d91ef034c7a45b55d2e09060642c, type: 3}
     - target: {fileID: 7732272648360200611, guid: 226fda40099a040c2849b343c2102fc9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
