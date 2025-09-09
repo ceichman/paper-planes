@@ -103,9 +103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4176296a367c34dd780db6c6c21a1a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0.3
+  rotationSpeed: -30
   timer: 2
-  increase: 15
+  healingEffect: 0
   healAudio: {fileID: 2056479971174140796}
 --- !u!61 &5895148788186519072
 BoxCollider2D:

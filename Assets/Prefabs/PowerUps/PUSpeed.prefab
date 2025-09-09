@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb21216d66f554627b015c31fcb0d4df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 0.4
+  rotationSpeed: 20
   timer: 3
   increase: 4
   speedUpAudio: {fileID: 6538829885634227320}

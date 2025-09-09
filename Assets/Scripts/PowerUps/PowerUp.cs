@@ -26,9 +26,12 @@ public abstract class PowerUp : MonoBehaviour
 
     protected IEnumerator RotateWhileFalling()
     {
-        this.currentRotationZ += Time.deltaTime * rotationSpeed;
-        this.transform.rotation = Quaternion.AngleAxis(currentRotationZ, Vector3.forward);
-        yield return null;
+        while (true)
+        {
+            this.currentRotationZ += Time.deltaTime * rotationSpeed;
+            this.transform.rotation = Quaternion.AngleAxis(currentRotationZ, Vector3.forward);
+            yield return null;
+        }
     }
     void Start()
     {
