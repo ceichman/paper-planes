@@ -18,6 +18,10 @@ public abstract class PowerUp : MonoBehaviour
             this.player = collision.gameObject;
             StartCoroutine(OnConsumed());
         }
+        else if (collision.gameObject.tag == "PowerupKiller")
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     protected IEnumerator RotateWhileFalling()
