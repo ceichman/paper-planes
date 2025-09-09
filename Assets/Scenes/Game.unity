@@ -893,10 +893,6 @@ PrefabInstance:
       propertyPath: playerNum
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 2877682840139773858, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
-      propertyPath: currentWeapon
-      value: 
-      objectReference: {fileID: 7059739907036733166, guid: 610e34b2b26ce44078063fa7b292689a, type: 3}
     - target: {fileID: 6624349546314394338, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
       propertyPath: _thrust
       value: 92
@@ -1036,10 +1032,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
-    - target: {fileID: 2877682840139773858, guid: e65677947d34e4d19bc42f0c394dec48, type: 3}
-      propertyPath: currentWeapon
-      value: 
-      objectReference: {fileID: 2838016370933468091, guid: 69bb5420b53bf461b833c2b6993069df, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1781,6 +1773,9 @@ MonoBehaviour:
   powerUps:
   - {fileID: 2827482450982394907, guid: 226fda40099a040c2849b343c2102fc9, type: 3}
   - {fileID: 799271861862393141, guid: 0688d3341da58470381b9565341a4b66, type: 3}
+  - {fileID: 6418172636881186972, guid: f4b3a591c51fe44d0b4c393c771e4fea, type: 3}
+  - {fileID: 4079997372485335869, guid: 593878f77bbb343d69abf5dd1e8d6606, type: 3}
+  - {fileID: 8182856120357795643, guid: 3c929a7ff306c4405a3a3c86dfac6ec8, type: 3}
   maxSpawnDelay: 3
   horizontalSpawnRadius: 15
 --- !u!1 &1842069944
