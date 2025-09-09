@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI _gameOverText;
     public GameObject _panel; // Background for text 
     public float timeUntilReset;
-    
+    public AudioSource winMusic; // win sound
+    public AudioSource music; 
     void Start()
     {
         Singleton = this;
@@ -19,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public void DisplayGameOver(int losingPlayer)
     {
+        music.Stop();
+        winMusic.Play();
         StartCoroutine(Display(losingPlayer));
     }
     
