@@ -17,6 +17,7 @@ public abstract class PowerUp : MonoBehaviour
         {
             this.player = collision.gameObject;
             StartCoroutine(OnConsumed());
+            Destroy(this.GetComponent<SpriteRenderer>());
         }
         else if (collision.gameObject.tag == "PowerupKiller")
         {
