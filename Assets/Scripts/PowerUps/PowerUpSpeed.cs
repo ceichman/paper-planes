@@ -3,36 +3,19 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
-public class PowerUpSpeed : MonoBehaviour
+public class PowerUpSpeed : PowerUp
 {
 
     public float timer;
-    private GameObject player;
-    private float baseSpeed;
-    private Animator animator;
     public float increase;
 
     public AudioSource speedUpAudio;
 
-   
-    void OnTriggerEnter2D(Collider2D collision)
+
+    protected override IEnumerator OnConsumed()
     {
-        Debug.Log("collide");
-        if (collision.gameObject.tag == "Player")
-        {
-            player = collision.gameObject;
-            baseSpeed = player.GetComponent<PlaneMovement>()._thrustPower;
-            animator = player.GetComponent<Animator>();
-            StartCoroutine(SpeedUp());
-
-        }
-    }
-
-
-
-    IEnumerator SpeedUp()
-    {
-
+        float baseSpeed = player.GetComponent<PlaneMovement>()._thrustPower;
+        Animator animator = player.GetComponent<Animator>();
         player.GetComponent<PlaneMovement>()._thrustPower = baseSpeed + increase;
         Debug.Log("speedup)");
         Destroy(this.gameObject.GetComponent<SpriteRenderer>());
