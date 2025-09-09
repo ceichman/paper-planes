@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -8,6 +9,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI _gameOverText;
     public GameObject _panel; // Background for text 
     public float timeUntilReset;
+    
     void Start()
     {
         Singleton = this;
@@ -17,6 +19,12 @@ public class GameManager : MonoBehaviour
 
     public void DisplayGameOver(int losingPlayer)
     {
+        StartCoroutine(Display(losingPlayer));
+    }
+    
+    IEnumerator Display(int losingPlayer)
+    {
+        yield return new WaitForSeconds(2f);
         Debug.Log("name: " + transform.name);
         Debug.Log("Game Manager method called with losingPlayer " + losingPlayer);
         if (losingPlayer == 2)
