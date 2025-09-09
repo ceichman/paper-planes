@@ -7,7 +7,7 @@ public class PlaneMovement : MonoBehaviour
 {
 
     private Rigidbody2D _rb2d;
-    public float _thrustPower;
+    [SerializeField] public float _thrustPower;
     [SerializeField] private float _rotationTorque;
     [SerializeField] private float _backgroundTorqueStrength;
     [SerializeField] private float _wingAngle = 10;
@@ -31,6 +31,7 @@ public class PlaneMovement : MonoBehaviour
         // touch any key input, then we can set drag to something like 2.5f. 
         if (Input.GetKey(_thrust))
         {
+            Debug.Log("Thrust");
             _rb2d.AddForce(transform.up * _thrustPower);
         }
         if (Input.GetKey(_rotateLeft))
@@ -45,6 +46,8 @@ public class PlaneMovement : MonoBehaviour
         float currentRotation = this.transform.rotation.eulerAngles.z;
         float angularDistanceToHorizontal = (currentRotation > 180) ? 270 - currentRotation + _wingAngle : 90 - currentRotation - _wingAngle;
         _rb2d.AddTorque(_backgroundTorqueStrength * angularDistanceToHorizontal);
+
+        this.GetComponent<SpriteRenderer>().flipX = currentRotation < 180 ? true : false;
 
         // more drag at high angles of attack (from 0 to 1)
         _rb2d.linearDamping = Mathf.Clamp(0.3f, 1.0f, Mathf.Abs(angularDistanceToHorizontal) / 90.0f);
