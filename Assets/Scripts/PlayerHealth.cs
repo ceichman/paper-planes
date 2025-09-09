@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
 
     private Animator animator;
     [SerializeField] private HealthBar _healthBar;
+    [SerializeField] private GameObject deathEffect;
 
     void Awake()
     {
@@ -33,6 +34,12 @@ public class PlayerHealth : MonoBehaviour, IDestroyable
             if (health <= 0)
             {
                 Debug.Log("Calling game over");
+
+                if (deathEffect != null)
+                {
+                    Instantiate(deathEffect, transform.position, Quaternion.identity);
+                }
+
                 GameManager.Singleton.DisplayGameOver(_playerNum);
                 this.OnDestroy.Invoke();
                 Destroy(this.gameObject);

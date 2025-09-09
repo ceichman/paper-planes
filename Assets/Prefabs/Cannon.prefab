@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1124201563149812550}
   - component: {fileID: 2539788326570395279}
   - component: {fileID: 5616887311332008783}
+  - component: {fileID: -8287784912018822210}
   m_Layer: 0
   m_Name: Cannon
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2838016370933468091}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1702802, y: -1.1806315, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,10 +79,10 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6506695024747450743, guid: 497f85f3918cf4b049f20f3f4a3d504e, type: 3}
+  m_Sprite: {fileID: 9077658177427429181, guid: 99ed706b5297eda4d9a42b4f222c0e31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -103,10 +104,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 8
   cooldown: 0.1
-  speed: 40
-  lifetime: 0.2
+  speed: 10
+  lifetime: 2
   spread: 4
-  cannonBullet: {fileID: 8287673042113058876, guid: 3d00c168a16d843e2bbfb5b4526252ee, type: 3}
 --- !u!61 &5616887311332008783
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.12, y: 1.26}
+    oldSize: {x: 0.68, y: 1.02}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -153,3 +153,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.12, y: 1.26}
   m_EdgeRadius: 0
+--- !u!95 &-8287784912018822210
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2838016370933468091}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 555403bbf395f4347ba9fe5d29b1aa44, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
