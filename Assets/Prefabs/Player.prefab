@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 656481918308770024}
   - component: {fileID: 2877682840139773858}
   - component: {fileID: 7602832731004590813}
+  - component: {fileID: 8842229590645162957}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -303,6 +304,7 @@ MonoBehaviour:
   canDamage: 1
   maxHealth: 50
   health: 50
+  _playerNum: 0
   _healthBar: {fileID: 0}
 --- !u!114 &2877682840139773858
 MonoBehaviour:
@@ -329,7 +331,7 @@ Animator:
   m_GameObject: {fileID: 2621869916400479354}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a3fe00090ccb407899281b1cdf7b539, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -341,3 +343,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8842229590645162957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2621869916400479354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fda437b3bc9648218ee1d9f7b4b0515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grav: 1
+  cooldown: 3
+  unfoldKey: 9

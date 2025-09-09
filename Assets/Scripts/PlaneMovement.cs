@@ -7,7 +7,7 @@ public class PlaneMovement : MonoBehaviour
 {
 
     private Rigidbody2D _rb2d;
-    [SerializeField] private float _thrustPower;
+    public float _thrustPower;
     [SerializeField] private float _rotationTorque;
     [SerializeField] private float _backgroundTorqueStrength;
     [SerializeField] private float _wingAngle = 10;
