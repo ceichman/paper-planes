@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Weapon
   - PowerupKiller
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -15,7 +16,7 @@ TagManager:
   - UI
   - Player 1
   - Player 2
-  - 
+  - Clouds
   - 
   - 
   - 
@@ -45,6 +46,9 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: clouds
+    uniqueID: 645376469
     locked: 0
   m_RenderingLayers:
   - Default

@@ -11835,6 +11835,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackGroundPicker
       objectReference: {fileID: 0}
+    - target: {fileID: 4444155194209584989, guid: 722a93567ab0dfb4e8b30ca5cbb9f883, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4502709918134191469, guid: 722a93567ab0dfb4e8b30ca5cbb9f883, type: 3}
       propertyPath: spawnPosition.z
       value: 10
@@ -11855,6 +11859,10 @@ PrefabInstance:
     - target: {fileID: 839835833218058097, guid: ddc30697f19660549a38d15141e7c5e9, type: 3}
       propertyPath: m_Name
       value: LeftCloudSpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 839835833218058097, guid: ddc30697f19660549a38d15141e7c5e9, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5912971987775276969, guid: ddc30697f19660549a38d15141e7c5e9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12014,6 +12022,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RightCloudSpawner
       objectReference: {fileID: 0}
+    - target: {fileID: 4889827415682724379, guid: 6a1b1a88a09440a41a2678215f71028a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12027,9 +12039,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 108775825806202206, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 761716300067942510, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 895269835451858245, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1348517207096251769, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
       propertyPath: m_Name
       value: Clouds
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348517207096251769, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998479188108280528, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4274831037664483139, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12074,6 +12106,38 @@ PrefabInstance:
     - target: {fileID: 4459803067018495930, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5411758554407392082, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5714960497154362150, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6740102846248961766, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770374265086842372, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7139258893455751108, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646824370518809701, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8496223287331850285, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8723178362885077101, guid: 93edd089e37353a43a69be2bc2f31f17, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

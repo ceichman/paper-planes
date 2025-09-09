@@ -229,6 +229,7 @@ MonoBehaviour:
   _thrust: 114
   _rotateLeft: 113
   _rotateRight: 119
+  wallKnockbackStrength: 100
 --- !u!61 &1640712213118061784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -308,6 +309,7 @@ MonoBehaviour:
   damageSound: {fileID: 8300000, guid: af66162561d2eed40ad49268cab318bb, type: 3}
   _playerNum: 0
   _healthBar: {fileID: 0}
+  deathEffect: {fileID: 0}
 --- !u!114 &2877682840139773858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,7 +373,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   m_Resource: {fileID: 8300000, guid: 4310474905e266640852f43bd609a1a4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1

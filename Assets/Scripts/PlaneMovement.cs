@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
 
@@ -14,6 +15,7 @@ public class PlaneMovement : MonoBehaviour
     [SerializeField] private KeyCode _thrust;
     [SerializeField] private KeyCode _rotateLeft;
     [SerializeField] private KeyCode _rotateRight;
+    [SerializeField] private float wallKnockbackStrength;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -52,4 +54,15 @@ public class PlaneMovement : MonoBehaviour
         // more drag at high angles of attack (from 0 to 1)
         _rb2d.linearDamping = Mathf.Clamp(0.3f, 1.0f, Mathf.Abs(angularDistanceToHorizontal) / 90.0f);
     }
+
+    void OCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            ContactPoint2D contact = collision.contacts[0];
+            Vector2 force = contact.normalImpulse * contact.normal * this.wallKnockbackStrength;
+            this._rb2d.AddForce(force);
+        }
+    }
+
 }
