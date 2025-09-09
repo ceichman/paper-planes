@@ -1347,7 +1347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13679248, g: 0.12775901, b: 0.12775901, a: 1}
+  m_Color: {r: 0.13679248, g: 0.12775901, b: 0.12775901, a: 0.6039216}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1829,7 +1829,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 1
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1489309981
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &1842069944

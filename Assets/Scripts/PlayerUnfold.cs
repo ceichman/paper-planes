@@ -14,7 +14,8 @@ public class PlayerUnfold : MonoBehaviour
     public float cooldown;
 
     public KeyCode unfoldKey;
-    public AudioSource unfoldAudio;
+    private AudioSource audioSource;
+    public AudioClip unfoldSound;
 
 
     void Start()
@@ -22,9 +23,9 @@ public class PlayerUnfold : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         animator.SetBool("Unfolded", false);
-
-
+        this.audioSource = this.GetComponent<AudioSource>();
     }
+
     void Update()
     {
 
@@ -56,7 +57,7 @@ public class PlayerUnfold : MonoBehaviour
         GetComponent<PlaneMovement>().enabled = false;
         animator.SetBool("Unfolded", true);
         Debug.Log("animation input");
-        unfoldAudio.Play();
+        this.audioSource.PlayOneShot(this.unfoldSound);
     
     }
 

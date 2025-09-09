@@ -11,17 +11,19 @@ public class PowerUpHealth : MonoBehaviour
 
     public AudioSource healAudio;
 
-   
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-            player = collision.gameObject;
-            baseHealth = player.GetComponent<PlayerHealth>().health;
+        if (collision.gameObject.tag == "Player")
+        { 
+        player = collision.gameObject;
+        baseHealth = player.GetComponent<PlayerHealth>().health;
 
         if (baseHealth < player.GetComponent<PlayerHealth>().maxHealth)
         {
             StartCoroutine(Heal());
         }
-
+    }
      }
 
 
