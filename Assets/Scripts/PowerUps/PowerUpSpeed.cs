@@ -23,7 +23,6 @@ public class PowerUpSpeed : PowerUp
         player.GetComponent<Animator>().SetBool("PUSpeed", true);
         speedUpAudio.Play();
 
-
         yield return new WaitForSeconds(timer);
         Debug.Log("powerup over");
         player.GetComponent<PlaneMovement>()._thrustPower = baseSpeed;

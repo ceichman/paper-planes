@@ -90,6 +90,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: -30
-  timer: 3
+  timer: 2
   increase: 4
-  speedUpAudio: {fileID: 0}
