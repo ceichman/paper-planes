@@ -20,6 +20,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PUBomb
       objectReference: {fileID: 0}
+    - target: {fileID: 5677133599696331850, guid: 593878f77bbb343d69abf5dd1e8d6606, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7285887074748810209, guid: 8f72d91ef034c7a45b55d2e09060642c, type: 3}
     - target: {fileID: 8425318671178378885, guid: 593878f77bbb343d69abf5dd1e8d6606, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
